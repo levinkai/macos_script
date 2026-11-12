@@ -294,9 +294,9 @@ def handle_conversion_result(
     print("\n" + "=" * 64)
     print("视频转换结果")
     print("=" * 64)
-
-    print(f"源视频大小：{format_size(source_size)}")
-    print(f"输出大小：  {format_size(output_size)}")
+    print(f'视频路径："{source.parent}"')
+    print(f'输入视频："{source.name}" 格式：{source.suffix} 大小：{format_size(source_size)}')
+    print(f'输出视频："{destination.name}" 格式：{destination.suffix} 大小：{format_size(output_size)}')
 
     # 情况一：输出文件不小于源文件，判定转换失败。
     if output_size >= source_size:
